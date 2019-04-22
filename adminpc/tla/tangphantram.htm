@@ -1,0 +1,88 @@
+﻿
+
+<form method="post" action="">
+<div class="botim">
+<div class="botren"><div class="chutrang2">Quản lý chiết khấu / hoa hồng đại lý</div></div>
+<table border="0" width="100%" id="table1" cellspacing="0" cellpadding="0">
+
+	<tr>
+
+		<td>
+
+		<table border="0" width="100%" id="table2" cellspacing="1">
+
+			<tr>
+
+				<td height="20" align="center" colspan="5">
+
+											<select name="Select1" onchange="window.location.href='index.php?{$c_url}&daily='+this.options[selectedIndex].value+'';">
+
+											<option selected="">Xem theo đại lý
+
+											</option>
+
+											{html_options values=$xvalues output=$xnames selected = $sl}
+
+											</select>ĐK1<input name="post[dk1]" type="text" style="width: 82px">&nbsp;ĐK2<input name="post[dk2]" type="text" style="width: 82px">Phần 
+
+				trăm<input name="post[phantram]" type="text" style="width: 29px"><input name="submit" type="submit" value="Thêm" class="nutbam2"></td>
+
+			</tr>
+
+			<tr class="chuxanhdam">
+
+				<td width="4%" height="20" align="center">
+
+				<p align="center" style="font-weight: 700">STT</td>
+
+				<td width="19%" height="20"><b>Điều kiện (&gt;)</b></td>
+
+				<td width="16%" height="20">Điều kiện 2 (&lt;=)</td>
+
+				<td height="20" style="width: 15%">Phần trăm 
+
+				tăng</td>
+
+				<td width="6%" align="center" height="20" style="width: 15%"><b>
+
+				HĐ</b></td>
+
+			</tr>
+
+			{section name=d loop=$data}
+
+			<tr class="{$data[d].class}">
+
+				<td class="adlef" width="4%" height="20" align="center">{$data[d].stt}</td>
+
+				<td class="adlef" width="19%" height="20">
+
+				{$data[d].dk1}</td>
+
+				<td class="adlef" width="16%" height="20">
+
+				{$data[d].dk2}</td>
+
+				<td class="adlef" height="20" style="width: 15%">
+
+				{$data[d].phantram}%</td>
+
+				
+
+				<td class="adlef" width="7%" align="center" height="20">
+
+				<a  href="?{$c_url}&ptid={$data[d].id}" onclick="return conf('{$data[d].dk2} >= Gía >{$data[d].dk1}')">Xóa</a></td>
+
+			</tr>
+
+			{/section}
+
+			</table>
+
+		</td>
+
+	</tr>
+
+</table>
+
+</div>

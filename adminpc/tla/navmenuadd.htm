@@ -1,0 +1,44 @@
+﻿
+<form method="post" action="">
+<div class="botim">
+<div class="botren"><div class="chutrang2">Quản lý trang</div></div>
+<table border="0" width="100%" id="table1" cellspacing="0" cellpadding="0">
+	<tr>
+		<td>
+		<table border="0" width="100%" id="table2" cellspacing="1">
+			<tr>
+				<td class="adlef" width="50%" height="20" style="text-align: left">
+				<p style="text-align: left"><b>Tên menu:</b></td>
+				<td class="adlef" width="50%" height="20" style="text-align: left">
+				<p align="left" style="text-align: left"><input type="text" name="menu" size="20"></td>
+			</tr>
+			{section name=d loop=$stt}
+			{/section}
+			<tr>
+				<td class="adlef" width="50%" height="20" style="text-align: left">
+				<p style="text-align: left"><b>Module link tới:</b></td>
+				<td class="adlef" width="50%" height="20" style="text-align: left">
+				<input type="text" name="post[mmd]" size="20"></td>
+			</tr>
+			<tr>
+				<td class="adlef" width="50%" height="20" style="text-align: left">
+				<p style="text-align: left"><b>Thứ tự hiển thi:</b></td>
+				<td class="adlef" width="50%" height="20" style="text-align: left">
+				<input type="text" name="post[moder]" size="20" style="width: 46px"></td>
+			</tr>
+			<tr>
+				<td class="adlef" width="50%" height="20" style="text-align: left">
+				Thư mục</td>
+				<td class="adlef" width="50%" height="20" style="text-align: left">
+				<select size="1" name="post[mgr]">
+				<option selected value="0">Chuyên mục</option>
+				{html_options output=$tenmuc values=$cid selected = $select}
+				</select></td>
+			</tr>
+			</table>
+		<p align="center">
+		<input  type="submit" value="Thêm menu" name="submit" class="nutbam2">  </td>
+	</tr>
+</table>
+</div>
+</form>

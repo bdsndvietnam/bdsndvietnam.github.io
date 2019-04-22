@@ -1,0 +1,13 @@
+﻿.navmenu{background:url(images/main-bg.gif) repeat-x}
+.navmenu ul{float:center;list-style-type:none;margin:0;padding:0}
+.navmenu ul li{position:relative;display:inline-block;float:center}
+.navmenu ul li a{display:block;text-align:center;width:100px;height:28px;padding-top:12px;border:0 1px 1px 1px solid #CCC;border-left-width:0;text-decoration:none;color:#FFF;font:bold 13px Tahoma}
+.navmenu ul li ul{position:absolute;display:block;visibility:hidden;z-index:100}
+.navmenu ul li ul li{display:inline;float:none}
+.navmenu ul li ul li a{width:120px;height:25px;background:#39F;color:#000;padding-left:10px;border-bottom:1px dotted #fff;font-weight:700;text-align:left}
+.navmenu ul li a:hover{background:url(images/main-bg2.png) repeat-x;font-weight:700}
+.navmenu ul li ul li a:hover{background:#333;padding-left:10px;color:#ff0;border-width:0 1px 1px}
+.navmenu .arrowdiv{position:absolute;right:0;background:transparent url(images/menuarrow.gif) no-repeat center left}
+* html p#iepara{padding-top:1em}
+* html .navmenu ul li{float:left;height:1%}
+* html .navmenu ul li a{height:1%}

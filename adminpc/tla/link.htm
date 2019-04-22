@@ -1,0 +1,64 @@
+﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<form method="post" action="">
+<div align="center">
+	<table style="width: 70%" cellspacing="0" cellpadding="0">
+		<tr>
+			
+			<td>
+			<table style="width: 100%" cellspacing="0" cellpadding="0">
+				<tr>
+					<td>
+										<img alt="" src="images/bg1.gif" /></td>
+					<td class="mainbg">Quản lý liên kết</td>
+					<td>
+										<img alt="" src="images/bg2.gif" /></td>
+				</tr>
+			</table>
+			</td>
+			
+		</tr>
+		<tr>
+			<td class="bo2">
+
+<table border="0" width="100%" id="table1" cellspacing="0" cellpadding="0">
+	<tr>
+		<td height="20">
+		<table style="width: 100%">
+			<tr>
+				<td>Link:<input name="post[link]" type="text" value="{$link}">&nbsp;Title:<input name="post[title]" type="text" value="{$title}"><input name="submit" type="submit" value="Thêm mới"></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<table border="0" width="100%" id="table2" bgcolor="#EBEBEB" cellspacing="1">
+			<tr class="chucam">
+				<td width="4%" height="20" align="center">
+				<p align="center" style="font-weight: 700" class="style10">STT</td>
+				<td width="19%" height="20" class="style10">Link</td>
+				<td width="16%" height="20" class="style10">Từ khóa</td>
+				<td width="6%" align="center" height="20" class="style10">Sửa</td>
+				<td width="7%" align="center" height="20" class="style10">Xóa</td>
+			</tr>
+			{section name=d loop=$data}
+			<tr class="{$data[d].class}">
+				<td width="4%" height="20" align="center">{$data[d].st}</td>
+				<td width="19%" height="20" class="left50px">
+				{$data[d].link}</td>
+				<td width="16%" height="20">
+				{$data[d].title}</td>
+				<td width="6%" align="center" height="20">
+				<a href="?act=link&editid={$data[d].id}">Sửa</a></td>
+				<td width="7%" align="center" height="20">
+				<a  href="?{$c_url}&delid={$data[d].id}" onclick="return conf('{$data[d].tieude}')">
+				Xóa</a></td>
+			</tr>
+			{/section}
+			</table>
+		</td>
+	</tr>
+</table>
+</td>
+</tr>
+</table>

@@ -1,0 +1,153 @@
+﻿<div class="botim">
+<div class="botren"><div class="chutrang2">Thêm thành viên</div></div>
+			<form method="post" action="">
+			<table style="width: 100%;" cellspacing="1" cellpadding="0">
+				<td colspan="2">
+						<div align="center">
+							<b>Bộ gõ tiếng việt</b><input onfocus="setTypingMode(0)" type="radio" CHECKED value="OFF" name="switch">Tắt&nbsp;&nbsp;&nbsp;
+							<input class="bvclass" onfocus="setTypingMode(1)" type="radio" value="TELEX" name="switch">Bật</div>
+</td>
+				<tr>
+					<td class="adlef" style="width: 50%; height: 22px; text-align: left;">
+					<p style="margin-left: 15px; margin-top: 0; margin-bottom: 0">
+					<strong>Họ Và Tên:</strong></p>
+					</td>
+					<td class="adlef" style="width: 50%; height: 22px; text-align: left;">
+					<p style="margin-left: 15px; margin-top: 0; margin-bottom: 0">
+					<strong>
+					<input onkeyup="initTyper(this);" name="post[hovaten]" type="text" value="{$hovaten}" style="height: 15px" /></strong></p>
+					</td>
+				</tr>
+				<tr>
+					<td class="adlef" style="width: 50%; height: 22px; text-align: left;">
+					<p style="margin-left: 15px; margin-top: 0; margin-bottom: 0">
+					<strong>Địa chỉ:</strong></p>
+					</td>
+					<td class="adlef" style="width: 50%; height: 22px; text-align: left;">
+					<p style="margin-left: 15px; margin-top: 0; margin-bottom: 0">
+					<strong>
+					<input onkeyup="initTyper(this);" name="post[diachi]" type="text" style="width: 170px" value="{$diachi}" /></strong></p>
+					</td>
+				</tr>
+				<tr>
+					<td class="adlef" style="width: 50%; height: 22px; text-align: left;">
+					<p style="margin-left: 15px; margin-top: 0; margin-bottom: 0">
+					<strong>Tỉnh thành:</strong></p>
+					</td>
+					<td class="adlef" style="width: 50%; height: 22px; text-align: left;">
+						<p style="margin-left: 15px; margin-top: 0; margin-bottom: 0">
+						<strong>
+						<select name="post[city]" id="c2">
+		<option value="" selected="">-- Tỉnh thành --</option>
+		{html_options values = $cityn output = $cityn selected = $select}
+		</select></strong></p>
+					</td>
+				</tr>
+				<tr>
+					<td class="adlef" style="width: 50%; height: 22px; text-align: left;">
+					<p style="margin-left: 15px; margin-top: 0; margin-bottom: 0">
+					<strong>Mobile:</strong></p>
+					</td>
+					<td class="adlef" style="width: 50%; height: 22px; text-align: left;">
+					<p style="margin-left: 15px; margin-top: 0; margin-bottom: 0">
+					<strong>
+					<input name="post[mobile]" type="text" style="width: 107px" value="{$mobile}" /></strong></p>
+					</td>
+				</tr>
+				<tr style="display:none">
+					<td class="adlef" style="width: 50%; height: 22px; text-align: left;">
+					<p style="margin-left: 15px; margin-top: 0; margin-bottom: 0">
+					<strong>Tel:</strong></p>
+					</td>
+					<td class="adlef" style="width: 50%; height: 22px; text-align: left;">
+					<p style="margin-left: 15px; margin-top: 0; margin-bottom: 0">
+					<strong>
+					<input name="post[tel]" type="text" style="width: 107px" value="{$tel}" />&nbsp;</strong></p>
+					</td>
+				</tr>
+				<tr style="display:none">
+					<td style="width: 50%; height: 22px; text-align: left;">
+					<p style="margin-left: 15px; margin-top: 0; margin-bottom: 0">
+					<strong>Fax:</strong></p>
+					</td>
+					<td style="width: 50%; height: 22px; text-align: left;">
+					<p style="margin-left: 15px; margin-top: 0; margin-bottom: 0">
+					<strong>
+					<input name="post[fax]" type="text" style="width: 107px" value="{$fax}" /></strong></p>
+					</td>
+				</tr>
+				<tr>
+					<td class="adlef" style="width: 50%; height: 22px; text-align: left;">
+					<p style="margin-left: 15px; margin-top: 0; margin-bottom: 0">
+					<strong>Website:</strong></p>
+					</td>
+					<td class="adlef" style="width: 50%; height: 22px; text-align: left;">
+					<p style="margin-left: 15px; margin-top: 0; margin-bottom: 0">
+					<strong>
+					<input name="post[website]" type="text" value="{$website}" /></strong></p>
+					</td>
+				</tr>
+				<tr>
+					<td class="adlef" style="width: 50%; height: 22px; text-align: left;">
+					<p style="margin-left: 15px; margin-top: 0; margin-bottom: 0">
+					<strong>Email:</strong></p>
+					</td>
+					<td class="adlef" style="width: 50%; height: 22px; text-align: left;">
+					<p style="margin-left: 15px; margin-top: 0; margin-bottom: 0">
+					<strong>
+					<input name="post[email]" type="text" value="{$email}" /></strong></p>
+					</td>
+				</tr>
+				<tr style="display:none">
+					<td class="adlef" style="width: 50%; height: 22px; text-align: left;">
+					<p style="margin-left: 15px; margin-top: 0; margin-bottom: 0">
+					<strong>CMTNND:</strong></p>
+					</td>
+					<td class="adlef" style="width: 50%; height: 22px; text-align: left;">
+					<p style="margin-left: 15px; margin-top: 0; margin-bottom: 0">
+					<strong>
+					<input name="post[cmtnd]" type="text" style="width: 107px" value="{$cmtnd}" /></strong></p>
+					</td>
+				</tr>
+				<tr>
+					<td class="adlef" style="width: 50%; height: 22px; text-align: left;">
+					<p style="margin-left: 15px; margin-top: 0; margin-bottom: 0">
+					<strong>Tên đăng nhập:</strong></p>
+					</td>
+					<td class="adlef" style="width: 50%; height: 22px; text-align: left;">
+					<p style="margin-left: 15px; margin-top: 0; margin-bottom: 0">
+					<strong>
+					<input name="post[username]" type="text" style="width: 107px" value="{$cmtnd}" /></strong></p>
+					</td>
+				</tr>
+				<tr>
+					<td class="adlef" style="width: 50%; height: 22px; text-align: left;">
+					<p style="margin-left: 15px; margin-top: 0; margin-bottom: 0">
+					<strong>Mật khẩu:</strong></p>
+					</td>
+					<td class="adlef" style="width: 50%; height: 22px; text-align: left;">
+					<p style="margin-left: 15px; margin-top: 0; margin-bottom: 0">
+					<strong>
+					<input name="post[password]" style="width: 107px" value="{$password}" /></strong></p>
+					</td>
+				</tr>
+				<tr>
+					<td class="adlef" style="width: 50%; height: 22px; text-align: left;">
+					<p style="margin-left: 15px; margin-top: 0; margin-bottom: 0">
+					<strong>Quyền:</strong></p>
+					</td>
+					<td class="adlef" style="width: 50%; height: 22px; text-align: left;">
+					<p style="margin-left: 15px; margin-top: 0; margin-bottom: 0">
+					<strong>
+					<select name="post[live]">
+					{html_options values = $value output = $name}
+					</select></strong></p>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" style="text-align: center; padding:10px">
+					<input name="submit" type="submit" value="Cập nhập" class="nutbam2" />&nbsp;<input name="Reset1" type="reset" value="Làm lại" class="nutbam2" />&nbsp;<a href="?act=dangso" class="nutbam">Đăng số<a/></td></td>
+				</tr>
+				</table>
+	</form>
+	</div>

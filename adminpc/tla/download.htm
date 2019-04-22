@@ -1,0 +1,26 @@
+﻿<table border="1px">
+	<tr>
+		<td style="width: 47px" align="center"><strong>STT</strong></td>
+		<td style="width: 152px"><strong>Số Sim</strong></td>
+		<td style="width: 128px"><strong>Giá Bán</strong></td>
+		<td style="width: 107px"><strong>Mạng</strong></td>
+	</tr>
+	{section name = d loop =$data}
+	<tr>
+		<td style="width: 47px" align="center">{$data[d].stt}</td>
+		<td style="width: 152px">&nbsp; {$data[d].sim1}</td>
+		<td style="width: 128px">{$data[d].giaban}</td>
+		<td style="width: 107px">
+		<p align="center">{$data[d].mang}</td>
+	</tr>
+	{/section}
+	<tr>
+		<td style="font-weight: 700;" align="center" colspan="4" class="style1">		{$my_title}<br>
+		Website:&nbsp; {$my_domain}<br>
+		Email: {$my_email}</td>
+	</tr>
+	<tr>
+		<td style="font-weight: 700;" align="center" colspan="4" class="style1">Liên hệ mua sim: 		{$my_hl1} /{$my_hl2} / {$my_hl3}</td>
+	</tr>
+	</table>
+

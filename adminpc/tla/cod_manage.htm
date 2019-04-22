@@ -1,0 +1,87 @@
+﻿
+<form method="post" action="">
+<div class="botim">
+<div class="botren"><div class="chutrang2">Quản lý chuyển phát</div></div>
+<table border="0" width="100%" id="table1" cellspacing="0" cellpadding="0">
+	<tr>
+		<td>
+		<table border="0" width="100%" id="table2" cellspacing="1">
+			<tr style="height:35px">
+				<td height="20" align="center" style="width: 2%">
+				&nbsp;</td>
+				<td height="20" style="width: 1%">&nbsp;</td>
+				<td height="20" style="width: 3%">&nbsp;</td>
+				<td height="20" style="width: 3%">&nbsp;</td>
+				<td height="20" style="width: 3%">&nbsp;</td>
+				<td width="6%" align="center" height="20" colspan="5">&nbsp;<a class="nutbam" href="index.php?act=cod_manage">Mới</a> <a class="nutbam" href="index.php?act=cod_manage&amp;type=2">Đã có</a>   <a class="nutbam" href="index.php?act=cod_manage&amp;type=3">Đã 
+				nhận tiền</a><a class="nutbam" style="font:small-caption; float:right" href="aindex.php?act=add_cod" rel="lyteframe[catalog]" title="Thêm Cron" rev="width: 500px; height: 500px; scrolling: no;">Add</a>
+				<a href="index.php?act=cod_manage&amp;type=4" class="nutbam">Thùng rác</a></td>
+				<td align="center" height="20" style="width: 3%"> &nbsp;</td>
+			</tr>
+			<tr class="chuxanhdam" style="height:35px">
+				<td height="20" align="center" style="width: 2%">
+				<p align="center"><b>STT</b></td>
+				<td class="adlef" height="20" style="width: 1%"><strong>Ngày chuyển</strong></td>
+				<td class="adlef" height="20" style="width: 3%"><strong>Số Sim</strong></td>
+				<td class="adlef" height="20" style="width: 3%"><strong>Gía tiền</strong></td>
+				<td class="adlef" height="20" style="width: 3%"><strong>Phone</strong></td>
+				<td class="adlef" width="6%" align="center" height="20">Mã bưu phẩm</td>
+				<td class="adlef" align="center" height="20" style="width: 5%">&nbsp;</td>
+				<td class="adlef" width="7%" align="center" height="20">Đã chuyển&nbsp;</td>
+				<td class="adlef" align="center" height="20" style="width: 4%"><strong>Cảnh báo</strong></td>
+				<td class="adlef" width="7%" align="center" height="20">&nbsp;</td>
+				<td class="adlef" align="center" height="20" style="width: 3%">&nbsp;</td>
+			</tr>
+			{section name=d loop=$data}
+			<tr class="{$data[d].class}" style="height:22px">
+				<td class="adlef" height="20" align="center" style="width: 2%">{$data[d].st}</td>
+				<td class="adlef" height="20" style="width: 1%">
+				{$data[d].ngaychuyen}</td>
+				<td class="adlef" height="20" style="width: 3%">
+				{$data[d].sosim}</td>
+				<td class="adlef" height="20" style="width: 3%">
+				{$data[d].giaban}</td>
+				<td class="adlef" height="20" style="width: 3%">
+				{$data[d].phone}</td>
+				<td class="adlef" width="6%" align="center" height="20">
+				{$data[d].mabuu}</td>
+				<td class="adlef" align="center" height="20" style="width: 5%">
+				{$data[d].sms}</td>
+				<td class="adlef" width="7%" align="center" height="20">
+				{$data[d].dachuyen}&nbsp; Ngày</td>
+				<td class="adlef" align="center" height="20" style="width: 4%">
+				{$data[d].canhbao}</td>
+				<td class="adlef" width="7%" align="center" height="20"> 
+				
+				<a class="nutbam" href="aindex.php?act=edit_cod&id={$data[d].id}" rel="lyteframe[catalog]" title="Sửa" rev="width: 500px; height: 500px; scrolling: no;">Sửa</a></td>
+				<td class="adlef" align="center" height="20" style="width: 3%"> 
+				
+				<input name="check[]" type="checkbox" value="{$data[d].id}">&nbsp;</td>
+			</tr>
+			{/section}
+			<tr class="{$data[d].class}" style="height:22px">
+				<td height="20" align="center" style="width: 2%">&nbsp;</td>
+				<td height="20" style="width: 1%">
+				&nbsp;</td>
+				<td height="20" style="width: 3%">
+				&nbsp;</td>
+				<td height="20" style="width: 3%">
+				<strong>{$tongtien}</strong></td>
+				<td height="20" style="width: 3%">
+				&nbsp;</td>
+				<td width="6%" align="center" height="20">
+				&nbsp;</td>
+				<td align="center" height="20" style="width: 5%">
+				&nbsp;</td>
+				<td width="7%" align="center" height="20" colspan="4">
+				<input name="daco" type="submit" value="Đã có" class="nutbam2" style="height: 26px">&nbsp;<input name="danhan" type="submit" value="Đã Nhận Tiền" class="nutbam2">
+				<input name="thungrac" type="submit" value="Xóa" class="nutbam2"></td>
+			</tr>
+			<tr class="{$data[d].class}">
+				<td height="20" align="center" colspan="11">{$paging}</td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</div>

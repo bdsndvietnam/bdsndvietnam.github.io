@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>URL</title>
+</head>
+<body>
+<div class="botim">
+<div class="botren"><div class="chutrang2">Quản lý Stuff</div></div>
+<table style="width: 100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td style="text-align: center; padding:10px">
+		<form method="post" action="">
+			<div style="text-align: center">
+				<input name="post[url]" type="text" style="width: 215px" /><input class="nutbam2" name="add" type="submit" value="Thêm link" /></div>
+		</form>
+		</td>
+	</tr>
+	<tr>
+		<td style="height: 22px; background-color: #C0C0C0">
+		<table style="width: 100%; background-color: #C0C0C0" cellpadding="0">
+			<tr>
+				<td style="width: 816px"><strong>URL</strong></td>
+				<td style="width: 353px"><strong>Total hit</strong></td>
+				<td style="width: 88px; text-align: center"><strong>Xóa</strong></td>
+			</tr>
+			{section name= d loop =$data}
+			<tr>
+				<td style="width: 816px; background-color: #FFFFFF; height: 25px;">
+				{$data[d].url}</td>
+				<td style="width: 353px; background-color: #FFFFFF; height: 25px;">
+				{$data[d].hit}</td>
+				<td style="width: 88px; text-align: center; background-color: #FFFFFF; height: 25px;">
+				<a href="index.php?act=stuff&amp;del={$data[d].id}">Xóa</a></td>
+			</tr>
+			{/section}
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+</table>
+
+</body>
+</div>
+</div>
+</html>

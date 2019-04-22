@@ -1,0 +1,96 @@
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<form method="get" action="">
+<input type="hidden" name="act" value="buy">
+<div class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+	<div class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+
+<div align="center" id="main">
+	<table style="width: 100%" cellspacing="0" cellpadding="0">
+		<tr>
+			
+			<td class="ui-widget-header">
+			<table style="width: 100%" cellspacing="0" cellpadding="0">
+				<tr>
+					<td width="92">
+					<input onclick="this.value=''" type="text" name="fullname" size="26" value="Họ Và tên khách hàng"></td>
+					<td>
+					<input onclick="this.value=''" type="text" name="number" size="26" value="Số Đặt / Điện Thoại" style="width: 121px"> <b>Theo ngày:{html_select_date}</b> <font color="#FFFF00">
+					<select name="ncity">
+					<option value="0" selected="selected">Thành Phố</option>
+					{html_options values = $citys output=$citys}
+					</select>
+					<input type="submit" value="Show" name="type" class="go" style="height: 26px">&nbsp;
+					<input onclick="window.location.href='{$my_url_query}&group=1'" type="button" value="Group" name="type0" class="go" style="height: 26px">&nbsp;
+					<input onclick="window.location.href='index.php?act=buy&rac=1'" type="button" value="Đã xóa" name="rac" class="go" style="height: 26px"></font></td>
+					<td>
+				&nbsp;</td>
+				</tr>
+			</table>
+			</td>
+			
+		</tr>
+		<tr>
+			<td align="center">
+
+<table border="0" width="100%" id="table1" cellspacing="0" cellpadding="0">
+	<tr>
+		<td>
+		<table border="0" width="100%" id="table2" cellspacing="1">
+			<tr class="ui-widget-header">
+				<td width="4%" height="20" align="center">
+				<p align="center" style="font-weight: 700">STT</td>
+				<td height="20" style="width: 16%"><strong>Ngày Giờ Đặt</strong></td>
+				<td height="20" style="width: 15%"><strong>Người mua</strong></td>
+				<td height="20" style="width: 13%"><strong>Mobile</strong></td>
+				<td height="20" style="width: 14%"><strong>Tỉnh
+				</strong><strong>thành</strong></td>
+				<td width="16%" height="20"><b>Số sim</b></td>
+				<td height="20" style="width: 14%"><strong>Giá tiền</strong></td>
+				<td width="6%" align="center" height="20" colspan="3" style="width: 15%"></td>
+			</tr>
+			{section name=d loop=$data}
+			<tr class="{$data[d].class}" style="height:22px">
+				<td width="4%" height="20" align="center">{$data[d].stt}</td>
+				<td height="20" style="width: 16%">
+				&nbsp;{$data[d].ngaygio}</td>
+				<td height="20" style="width: 15%">
+				{$data[d].hovaten}</td>
+				<td height="20" style="width: 13%">
+				<em>{$data[d].dienthoai}</em></td>
+				<td height="20" style="width: 14%">
+				{$data[d].city}</td>
+				<td width="16%" height="20">
+				{if $data[d].trangthai == 1}
+				<font color="#CC9900"><strong><span class="style1">{$data[d].sosim}</span></strong></font>
+				{elseif $data[d].trangthai == 2}
+				<font color="#0066FF"><span class="style1"><strong>{$data[d].sosim}</strong></span></font>
+				{elseif $data[d].trangthai == 4}
+				<font color="#CCCCCC"><strong><span class="style1">{$data[d].sosim}</span></strong></font>
+				{else}
+				<strong>{$data[d].sosim}</strong>
+				{/if}
+				
+				{if $data[d].notes > 0}(<span class="style1" style="color: #FF0000"><strong>{$data[d].notes}</strong></span>){/if}</td>
+				<td height="20" style="width: 14%">
+				{$data[d].giatien}</td>
+				<td align="center" height="20" style="width: 17%">
+				{$data[d].mydomain}</td>
+				<td width="6%" align="center" height="20">
+				<a class="go" style="font:small-caption" href="aindex.php?act=chitiet&id={$data[d].id}" rel="lyteframe[catalog]" title="Thông tin đơn đặt hàng" rev="width: 500px; height: 500px; scrolling: no;">Xem</a></td>
+				<td width="6%" align="center" height="20">
+				<a class="go"  href="{$my_url_query}&delid={$data[d].id}" onclick="return conf('{$data[d].hovaten}')">Xóa</a></td>
+			</tr>
+			{/section}
+			<tr class="{$data[d].class}">
+				<td height="20" align="center" colspan="10">{$paging}</td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+</td>
+</tr>
+</table>

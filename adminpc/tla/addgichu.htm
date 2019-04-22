@@ -1,0 +1,72 @@
+﻿<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ghi chu</title>
+</head>
+
+<body>
+
+<form method="post">
+		<div align="center">
+				<table style="width: 70%" cellspacing="0" cellpadding="0">
+					<tr>
+					<td>
+						<table style="width: 100%" cellspacing="0" cellpadding="0">
+							<tr>
+							<td>
+								<img alt="" src="../images/bg1.gif" /></td>
+							<td class="mainbg">
+								<strong>Thêm gi chú</strong></td>
+							<td>
+								<img alt="" src="../images/bg2.gif" /></td>
+							</tr>
+						</table></td>
+					</tr>
+					<tr>
+					<td class="bo2">
+						<div style="text-align: center">
+								<br />
+								<select name="post[pid]">
+								<option value="0" selected="selected">Lựa chọn đại lý</option>
+								{html_options values = $xvalues output = $xnames}</select></div>
+						<p style="text-align: center">
+						<textarea name="post[gichu]" style="width: 342px; height: 108px"></textarea></p>
+						<p></p>
+						<div style="text-align: center">
+								<input name="submit" type="submit" value="Thêm" /></div>
+					</td>
+					</tr>
+					<tr>
+					<td class="bo2">
+						<table style="width: 100%">
+							<tr>
+							<td style="text-align: center; height: 25px; background-color: #D9E6FF">
+								<strong>STT</strong></td>
+							<td style="text-align: center; height: 25px; background-color: #D9E6FF">
+								<strong>Đại Lý&nbsp;</strong></td>
+							<td style="width: 268px; text-align: center; height: 25px; background-color: #D9E6FF">
+								<strong>Ghi chú</strong></td>
+							<td style="text-align: center; height: 25px; background-color: #D9E6FF">
+								<strong>Xóa</strong></td>
+							</tr>
+							{section name=d loop=$data}
+							<tr>
+							<td style="height: 40px; background-color: #F0F5FF; text-align: center;">
+								<strong>{$data[d].stt}</strong></td>
+							<td style="height: 40px; background-color: #F0F5FF">
+								{$data[d].hovaten}</td>
+							<td style="width: 268px; height: 40px; background-color: #F0F5FF">
+								{$data[d].ghichu}</td>
+							<td style="height: 40px; text-align: center; background-color: #F0F5FF">
+								<a href="index.php?act=addgichu&amp;id={$data[d].id}">Xóa</a></td>
+							</tr>
+							{/section}
+						</table>
+					</td>
+					</tr>
+				</table></div>
+</form>
+
+</body>
+
+</html>

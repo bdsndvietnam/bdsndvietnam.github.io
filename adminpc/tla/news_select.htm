@@ -1,0 +1,7 @@
+﻿<select name="Select1" onchange="window.location.href='index.php?act=news&domains='+this.options[this.selectedIndex].value+''">
+<option selected="selected">Lựa chọn domain</option>
+{section name=d loop=$domain_sl}
+
+<option value="{$domain_sl[d]}">{$domain_sl[d]}</option>
+{/section}
+</select>

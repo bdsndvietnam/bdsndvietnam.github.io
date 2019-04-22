@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Quản lý SIM số</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" type="text/css" href="../css/menu.css" />
+<link rel="stylesheet" href="../lytebox.css" type="text/css" media="screen" />
+<link type="text/css" href="{$my_domain}/css/jquery-ui-1.8.13.custom.css" rel="stylesheet" />
+<link type="text/css" href="{$my_domain}/css/adstyle.css" rel="stylesheet" />
+<script type="text/javascript" src="/js/jquery-1.5.1.min.js"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.13.custom.min.js"></script>
+<script type="text/javascript"  language="javascript" src="js.js" ></script>
+<script type="text/javascript"  language="javascript" src="admin.js" ></script>
+<script type="text/javascript" language="javascript" src="../js/menu.js"></script>
+<script type="text/javascript" language="javascript" src="../lytebox.js"></script>
+<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox-1.2.6.css" media="screen" />
+<script type="text/javascript" src="fancybox/jquery.fancybox-1.2.6.pack.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</head>
+{$notes}
+<div style="padding-top:100px" align="center">
+<div class="botim">
+<div class="botren"><div class="chutrang2">Chi tiết đơn hàng</div></div>
+	<div>
+		<table border="0" width="100%" cellspacing="1">
+			<tr>
+				<td>
+				<table style="width: 100%;" cellspacing="0">
+					<tr>
+						<td>
+						<table style="width: 100%" cellspacing="1">
+							<tbody style="text-align: center">
+								<tr class="chuxanhdam" style="height: 25px">
+									<td style="height: 22px; width: 10%;">
+									<strong>STT</strong></td>
+									<td style="height: 22px; width: 40%;">
+									<strong>Số sim</strong></td>
+									<td style="width: 30%; height: 22px">
+									<strong>Giá tiền</strong></td>
+									<td style="width: 20%; height: 22px">
+									<strong>Hành động</strong></td>
+								</tr>
+								{section name = d loop = $data}
+								<tr style="text-align: center">
+									<td class="adlef" style="height: 33px; width: 10%;">{$data[d].stt}</td>
+									<td class="adlef" style="height: 33px; width: 40%;">
+									<strong>{$data[d].sosim}</strong></td>
+									<td class="adlef" style="width: 30%; height: 33px">
+									<strong>{$data[d].giatien}</strong></td>
+									<td class="adlef" style="width: 20%; height: 33px">
+									<table style="width: 100%; height: 100%">
+										<tr>
+											<td style="width: 40%; height: 29px;">
+											<a class="nutbam" href="aindex.php?act=chuyen&amp;id={$data[d].id}">
+											Chuyển</a></td>
+											<td style="width: 30%; height: 29px;">
+											<a id="addnt" class="nutbam" href="add_note.php?id={$data[d].id}">
+											note</a></td>
+											<td style="width: 30%; height: 29px;">
+											<a class="nutbam" href="index.php?act=chitiet&id={$del}">
+											Xóa</a></td>
+										</tr>
+									</table>
+									</td>
+								</tr>
+								{/section} {if $tongsim != 1}
+								<tr class="chuxanhdam">
+									<td style="height: 22px; width: 10%;">&nbsp;</td>
+									<td style="height: 22px; width: 40%;">
+									<strong>Tổng sim {$tongsim} Số</strong></td>
+									<td style="height: 22px" colspan="2">
+									<strong>Tổng tiền {$tongtien} (VNĐ)</strong></td>
+								</tr>
+								{/if}
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td valign="top">
+						<table style="width: 100%;border:1px solid #999;line-height:200%">
+							<tr style="height: 25px">
+								<td class="adlef" colspan="2"><strong>Thông tin khách hàng</strong></td>
+							</tr>
+							<tr>
+								<td class="adlef" style="width: 40%">Họ Và Tên:</td>
+								<td class="adlef" style="width: 60%"><strong>{$data[0].hovaten}
+								</strong></td>
+							</tr>
+							<tr>
+								<td class="adlef" style="width: 40%">Địa chỉ:</td>
+								<td class="adlef" style="width: 60%"><strong>{$data[0].diachi}</strong></td>
+							</tr>
+							<tr>
+								<td class="adlef" style="width: 40%">Điện thoại:</td>
+								<td class="adlef" style="width: 60%"><strong>{$data[0].dienthoai}</strong></td>
+							</tr>
+							<tr>
+								<td class="adlef" style="width: 40%">Email:</td>
+								<td class="adlef" style="width: 60%"><strong>{$data[0].email}</strong></td>
+							</tr>
+							<tr>
+								<td style="text-align: center;" colspan="2">
+								{$data[0].daily}&nbsp;</td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+		<form method="post">
+			<div style="text-align: center">
+				<textarea name="txt" style="width: 216px; height: 87px">So {$data[0].sosim} Ben em ko con anh/chi vui long chon so khac
+Xin Cam on!
+www.{$data[0].mydomain}
+</textarea><br />
+				<input type="hidden" name="mobile" type="text" value="{$data[0].dienthoai}" />
+				<br />
+				<input name="submit" type="submit" value="Gửi Tin nhắn tới {$data[0].dienthoai}" class="nutbam2" style="font-weight: bold" /></div><br />
+		</form>
+	</div>
+
+
+<div style="text-align: center">
+
+<a class="nutbam" href="aindex.php?act=add_cron&amp;id={$data[0].id}">Tạo cron </a> | <a class="nutbam" href="aindex.php?act=chitiet&amp;id={$data[0].id}&amp;set=1">Chưa giao dịch</a> | 
+<a href="aindex.php?act=nhantin&amp;id={$data[0].id}" class="nutbam">Nhắn tin </a>  | 
+&nbsp; 
+<a href="aindex.php?act=nhantin&amp;id={$data[0].id}&kiemtra=1" class="nutbam">Kiểm Tra</a> | 
+<a href="././" class="nutbam">Quay lại Quản lý</a></div><br />
+</div><br />
+<br />
+</div></div>

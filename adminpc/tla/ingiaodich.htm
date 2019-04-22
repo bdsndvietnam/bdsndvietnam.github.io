@@ -1,0 +1,56 @@
+﻿						<table style="width: 100%" cellspacing="0" border="1" class="bo2">
+							<tr class="b2">
+								<td style="height: 22px;" colspan="9" align="center">
+								<strong>THỐNG KÊ NHẬP XUẤT&nbsp; CẬP NHẬP NGÀY 
+								{$date}</strong></td>
+							</tr>
+							<tr class="b2">
+								<td style="width: 4%; height: 22px;">
+								<strong class="chucam">STT</strong></td>
+								<td style="width: 10%; height: 22px;" class="chucam"><strong>NGÀY</strong></td>
+								<td style="width: 15%; height: 22px;" class="chucam">
+								<strong>NGƯỜI MUA</strong></td>
+								<td style="width: 15%; height: 22px;" class="chucam"><strong>SỐ SIM</strong></td>
+								<td style="border-width: 1px; width: 12%; height: 22px;" class="chucam"><strong>GIÁ NHẬP</strong></td>
+								<td style="width: 10%; height: 22px;" class="chucam"><strong>GIÁ BÁN</strong></td>
+								<td style="width: 5%; height: 22px;" class="chucam"><strong>CK</strong></td>
+								<td style="width: 5%; height: 22px;" class="chucam">
+								<strong>PK</strong></td>
+								<td style="border-width: 1px; width: 7%; height: 22px;" class="chucam"><strong>TIỀN LÃI</strong></td>
+							</tr>
+							{section name=d1 loop=$data}
+							<tr class="{$data[d1].class}">
+								<td style="width: 4%" align="center">{$data[d1].stt}</td>
+								<td style="width: 10%">{$data[d1].ngay}</td>
+								<td style="width: 15%">{$data[d1].hovaten}</td>
+								<td style="width: 15%">{$data[d1].sosim}</td>
+								<td style="border-width: 1px; width: 12%">{$data[d1].gianhap}</td>
+								<td style="width: 10%">{$data[d1].giaban}</td>
+								<td style="width: 5%">{$data[d1].hoahong}%</td>
+								<td style="width: 5%"><strong>{$data[d1].phikhac}</strong></td>
+								<td style="border-width: 1px; width: 7%">{$data[d1].lai}</td>
+							</tr>
+							{/section}
+							<tr class="{$data[d1].class}">
+								<td style="width: 4%">&nbsp;</td>
+								<td style="width: 10%">&nbsp;</td>
+								<td style="width: 15%">&nbsp;</td>
+								<td style="width: 15%">&nbsp;</td>
+								<td style="border-width: 1px; width: 12%">&nbsp;</td>
+								<td style="width: 10%">&nbsp;</td>
+								<td colspan="2"><strong>
+								<span class="style1">Tổng lãi:</span></strong></td>
+								<td style="border-width: 1px; width: 7%"><strong>
+								<span class="style1">&nbsp;{$tonglai}</span></strong></td>
+							</tr>
+							<tr class="{$data[d1].class}">
+								<td colspan="9" align="center"><strong>
+								<a href="http://Sim.Ovi.Vn">
+								http://Sim.Ovi.Vn</a></strong> <br>
+								Email:
+								<a href="mailto:dntnledon@gmail.com">
+								dntnledon@gmail.com</a><br>
+								Hotline: 0973.015.015 - 0988.022.200<br>
+								Yahoo: nguyetquekg</td>
+							</tr>
+							</table>

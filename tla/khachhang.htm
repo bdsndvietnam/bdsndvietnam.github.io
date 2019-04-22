@@ -1,0 +1,55 @@
+﻿
+<br/>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td class="menu2">
+				<table style="width: 100%" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style="width: 31px">
+										<img alt="sim so dep" src="images/sk1.gif" style="width: 30px; height: 25px"></td>
+				<td align="left" class="style1" style="background-image: url('images/sk2.gif'); color: #FFFFFF; width: 526px;"><strong>Khách hàng tiêu biểu</strong></td>
+				<td>
+										<img alt="sim so dep" src="images/sk3.gif" style="width: 33px; height: 25px"></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<table border="0" width="100%" cellspacing="1"  class="bo2" align="left">
+		
+			{section name = d loop = $data}
+			<tr  class="{$data[d].class}">
+				<td bgcolor="#FFFFFF" style="width: 18px; font-weight: 700; text-align: left;">
+				
+				{$data[d].stt}</td>
+				<td bgcolor="#FFFFFF" align="left">
+				
+				<ul>
+					<li style="font-weight: 700">{$data[d].hovaten}</li>
+					<li>Địa chỉ: {$data[d].diachi} {$data[d].city}</li>
+					<li>Mobile: {$data[d].mobile}</li>
+					{if $data[d].tel!=''}
+					<li>Tel: {$data[d].tel}</li>
+					{/if}
+					{if $data[d].email!=''}
+					<li>Email: {$data[d].email}</li>
+					{/if}
+				</ul>
+				
+				</td>
+			</tr>
+			{/section}
+			</table>
+		</td>
+	</tr>
+	<tr>
+	<td style="background-image: url('images/bgt.gif'); height:4px"></td>
+	</tr>
+	<tr>
+	
+	<td colspan="2" align="center">{$paging}</td>
+	</tr>
+
+
+</table>

@@ -1,0 +1,62 @@
+﻿		<table style="border-style: solid; border-width: 1px;" cellspacing="1">
+			<tr>
+			<td style="width: 40px; height: 30px; text-align: center; background-color: #66C1FF; font-family: Arial, Helvetica, sans-serif;">
+				<strong class="chucam">STT</strong></td>
+			<td style="width: 100px; height: 30px; background-color: #66C1FF; text-align: center; font-family: Arial, Helvetica, sans-serif;" class="chucam">
+				<strong>NGÀY</strong></td>
+			<td style="width: 120px; height: 30px; background-color: #66C1FF; text-align: center; font-family: Arial, Helvetica, sans-serif;" class="chucam">
+				<strong>SỐ SIM</strong></td>
+			<td style="width: 100px; height: 30px; background-color: #66C1FF; text-align: left; font-family: Arial, Helvetica, sans-serif;" class="chucam">
+				<strong>GIÁ ĐẠI LÝ</strong></td>
+			<td style="width: 120px; height: 30px; background-color: #66C1FF; text-align: left; font-family: Arial, Helvetica, sans-serif;" class="chucam">
+				<strong>GIÁ GIAO KHÁCH</strong></td>
+			<td style="width: 40px; height: 30px; background-color: #66C1FF; text-align: center; font-family: Arial, Helvetica, sans-serif;" class="chucam">
+				<strong>CK</strong></td>
+			<td style="width: 80px; height: 30px; background-color: #66C1FF; text-align: center; font-family: Arial, Helvetica, sans-serif;" class="chucam">
+				<strong>PHÍ PS</strong></td>
+			<td style="width: 100px; height: 30px; background-color: #66C1FF; text-align: center; font-family: Arial, Helvetica, sans-serif;" class="chucam">
+				<strong>(+) (-)</strong></td>
+			<td style="height: 30px; width: 120px; background-color: #66C1FF; font-family: Arial, Helvetica, sans-serif;" class="chucam">
+				<strong>GIAO DỊCH</strong></td>
+			</tr>
+			{section name=d1 loop=$data} <tr>
+			<td style="border-width: 1px; width: 40px; text-align: center; font-size: small; font-family: Arial, Helvetica, sans-serif; color: #333333;">
+				<strong>{$data[d1].stt}</strong></td>
+			<td style="border-width: 1px; width: 100px; text-align: center; font-size: small; font-family: Arial, Helvetica, sans-serif; color: #333333;">
+				{$data[d1].ngay}</td>
+			<td style="border-width: 1px; width: 120px; text-align: center; font-size: small; font-family: Arial, Helvetica, sans-serif; color: #333333;">
+				<strong>{$data[d1].sosim}</strong></td>
+			<td style="border-width: 1px; width: 100px; text-align: left; font-size: small; font-family: Arial, Helvetica, sans-serif; color: #333333;">
+				<strong>{$data[d1].gianhap}</strong></td>
+			<td style="border-width: 1px; width: 120px; text-align: left; font-size: small; font-family: Arial, Helvetica, sans-serif; color: #333333;">
+				<strong>{$data[d1].giaban}</strong></td>
+			<td style="border-width: 1px; width: 40px; text-align: center; font-size: small; font-family: Arial, Helvetica, sans-serif; color: #333333;">
+				{$data[d1].hoahong}%</td>
+			<td style="border-width: 1px; width: 80px; text-align: center; font-size: small; font-family: Arial, Helvetica, sans-serif; color: #333333;">
+				{$data[d1].phikhac}</td>
+			<td style="border-width: 1px; width: 100px; text-align: left; font-size: small; font-family: Arial, Helvetica, sans-serif; color: #333333;">
+				<strong>{$data[d1].lai}</strong></td>
+			<td style="border-width: 1px; width: 120px; font-size: x-small; font-family: Arial, Helvetica, sans-serif; color: #333333;">
+				{$data[d1].kieu}</td>
+			</tr>
+			{/section} <tr>
+			<td style="border-width: 1px; width: 40px; text-align: center; font-size: small; font-family: Arial, Helvetica, sans-serif; color: #333333; height: 30px; background-color: #E9E9E9;">
+				<strong><span style="font-family: Arial, Helvetica, sans-serif">&nbsp;</span></strong></td>
+			<td style="border-width: 1px; width: 100px; text-align: center; font-size: small; font-family: Arial, Helvetica, sans-serif; color: #333333; height: 30px; background-color: #E9E9E9;">
+				&nbsp;</td>
+			<td style="border-width: 1px; width: 120px; text-align: center; font-size: small; font-family: Arial, Helvetica, sans-serif; color: #333333; height: 30px; background-color: #E9E9E9;">
+				<strong><span style="font-family: Arial, Helvetica, sans-serif">{$so} SIM</span></strong></td>
+			<td style="border-width: 1px; width: 100px; text-align: center; font-size: small; font-family: Arial, Helvetica, sans-serif; color: #333333; height: 30px; background-color: #E9E9E9;">
+				<strong><span style="font-family: Arial, Helvetica, sans-serif">&nbsp;{$tongnhap1}</span></strong></td>
+			<td style="border-width: 1px; width: 120px; text-align: left; font-size: small; font-family: Arial, Helvetica, sans-serif; color: #333333; height: 30px; background-color: #E9E9E9;">
+				&nbsp;</td>
+			<td style="border-width: 1px; width: 40px; text-align: center; font-size: small; font-family: Arial, Helvetica, sans-serif; color: #333333; height: 30px; background-color: #E9E9E9;">
+				&nbsp;</td>
+			<td style="border-width: 1px; width: 80px; font-size: small; font-family: Arial, Helvetica, sans-serif; color: #333333; height: 30px; background-color: #E9E9E9;">
+				&nbsp;</td>
+			<td style="border-width: 1px; width: 100px; text-align: left; font-size: small; font-family: Arial, Helvetica, sans-serif; color: #333333; height: 30px; background-color: #E9E9E9;">
+				<strong><span style="font-family: Arial, Helvetica, sans-serif">{$tonglai}</span></strong></td>
+			<td style="border-width: 1px; width: 120px; font-size: x-small; font-family: Arial, Helvetica, sans-serif; color: #333333; height: 30px; background-color: #E9E9E9;">
+				&nbsp;</td>
+			</tr>
+			</table>

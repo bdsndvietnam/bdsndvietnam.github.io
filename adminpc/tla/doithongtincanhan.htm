@@ -1,0 +1,111 @@
+﻿
+<div class="dv">
+
+
+	<table style="width: 100%" cellspacing="0" cellpadding="0">
+		<tr>
+			
+			<td>
+			<table style="width: 100%" cellspacing="0" cellpadding="0">
+				<tr>
+					<td>
+										<img alt="" src="images/bg1.gif" width="20" height="22" /></td>
+					<td class="mainbg"><strong class="dv"><span>Đổi thông tin cá nhân</span></strong></td>
+					<td>
+										<img alt="" src="images/bg2.gif" width="20" height="22" /></td>
+				</tr>
+			</table>
+			</td>
+			
+		</tr>
+		<tr class="bo2">
+			<td class="bo2">
+			<form method="post" action="">
+			<table style="width: 100%; background-color:#EBEBEB" cellspacing="1" cellpadding="0">
+				<tr>
+				<td colspan="2" style="background-color:white">
+						<table style="width: 100%">
+							<tr>
+								<td>Xin chào <strong>{$hovaten}</strong></td>
+								<td style="width: 22%">
+								<a href="?act=dondathang"><strong>Đơn đặt hàng</strong></a></td>
+								<td style="width: 10%"><strong>
+								<a href="index.php?act=dondathang&amp;thoat=1">Thoát</a></strong></td>
+							</tr>
+						</table>
+</td>
+				</tr>
+				<td colspan="2">
+						<div align="center" class="bo">
+							<b>Bộ gõ tiếng việ</b>t<input onfocus="setTypingMode(0)" type="radio" CHECKED value="OFF" name="switch">Tắt&nbsp;&nbsp;&nbsp;
+							<input class="bvclass" onfocus="setTypingMode(1)" type="radio" value="TELEX" name="switch">Bật</div>
+</td>
+				<tr class="b2">
+					<td class="left50px" style="width: 50%">Họ Và Tên:</td>
+					<td class="left50px" style="width: 50%">
+					<input onkeyup="initTyper(this);" name="post[hovaten]" type="text" value="{$hovaten}" style="height: 15px" /></td>
+				</tr>
+				<tr class="b1">
+					<td class="left50px" style="width: 50%">Địa chỉ:</td>
+					<td class="left50px" style="width: 50%">
+					<input onkeyup="initTyper(this);" name="post[diachi]" type="text" style="width: 170px" value="{$diachi}" /></td>
+				</tr>
+				<tr class="b2">
+					<td class="left50px" style="width: 50%">Tỉnh thành:</td>
+					<td class="left50px" style="width: 50%">
+						<select name="post[city]" id="c2">
+		<option value="" selected="">-- Tỉnh thành --</option>
+		{html_options values = $cityn output = $cityn selected = $select}
+		</select></td>
+				</tr>
+				<tr class="b1">
+					<td class="left50px" style="width: 50%">Mobile:</td>
+					<td class="left50px" style="width: 50%">
+					<input name="post[mobile]" type="text" style="width: 107px" value="{$mobile}" /></td>
+				</tr>
+				<tr class="b2">
+					<td class="left50px" style="width: 50%">Tel:</td>
+					<td class="left50px" style="width: 50%">
+					<input name="post[tel]" type="text" style="width: 107px" value="{$tel}" />&nbsp;</td>
+				</tr>
+				<tr class="b1">
+					<td class="left50px" style="width: 50%">Fax:</td>
+					<td class="left50px" style="width: 50%">
+					<input name="post[fax]" type="text" style="width: 107px" value="{$fax}" /></td>
+				</tr>
+				<tr class="b2">
+					<td class="left50px" style="width: 50%">Website:</td>
+					<td class="left50px" style="width: 50%">
+					<input name="post[website]" type="text" value="{$website}" /></td>
+				</tr>
+				<tr class="b1">
+					<td class="left50px" style="width: 50%">Email:</td>
+					<td class="left50px" style="width: 50%">
+					<input name="post[email]" type="text" value="{$email}" /></td>
+				</tr>
+				<tr class="b2">
+					<td class="left50px" style="width: 50%">CMTNND:</td>
+					<td class="left50px" style="width: 50%">
+					<input name="post[cmtnd]" type="text" style="width: 107px" value="{$cmtnd}" /></td>
+				</tr>
+				<tr class="b1">
+					<td class="left50px" style="width: 50%">Tên đăng nhập:</td>
+					<td class="left50px" style="width: 50%">
+					{$username}</td>
+				</tr>
+				<tr class="b2">
+					<td class="left50px" style="width: 50%">Mật khẩu:</td>
+					<td class="left50px" style="width: 50%">
+					<input name="post[password]" style="width: 107px" value="{$password}" /></td>
+				</tr>
+				<tr class="b1">
+					<td colspan="2">
+					<input name="submit" type="submit" value="Cập nhập" class="go" />&nbsp;<input name="Reset1" type="reset" value="Làm lại" class="go" /></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	</form>
+</div>
+

@@ -1,0 +1,140 @@
+body{font-size:13px;font-family:arial;margin:0;padding:0;background:#eee url(images/bg.png) 0 -250px repeat-x;}
+img{border:0}
+a{color:#ca2147;text-decoration:none;font-size:13px;}
+a:hover{color:#666}
+.wrap{width:960px;float:center}
+.bannertop{background:url(images/km22.jpg) no-repeat;height:120px;text-align:left;box-shadow:0 0 0 #000,0px 0 10px #000}
+.chonnhanh{font-size:16px;font-family:Arial;font-weight:700;margin:0;padding:0}
+.chonnhanh a:hover{color:#fabe4e}
+.nensim{background:#e6e6e6}
+.chuxanhdam{font-size:12px;font-weight:bold;font-family:arial;color:#06f;padding:5px}
+.chuxanhdam2{font-size:14px;font-family:arial;color:#666;padding:5px}
+.mauchutim{color:#666}
+.mauchutim1{color:#ff0}
+.chutrang{color:#fff;text-align:center}
+.chutrang2{text-align:center;font-size:21px;font-weight:normal;color:#fff;font-family:arial;padding:8px}
+.nenmenu1{background:#39f}
+.mausosim{width:100%;display:block;font-weight:700;font-size:15px;color:#ca2147;text-decoration:none}
+.topbar{height:35px}
+.homeico{background:url(images/img.png) -890px -260px no-repeat}
+.homeico a{padding-left:25px;color:#fff}
+.mailico{background:url(images/img.png) -783px -295px no-repeat}
+.mailico a{padding-left:25px;color:#fff}
+.msgico{background:url(images/img.png) -783px -263px no-repeat}
+.msgico a{padding-left:30px;color:#fff}
+.thanhtoan{background:url(images/img.png) 33px 0 no-repeat;width:40px;height:44px}
+.lienhe{background:url(images/img.png) -165px 0 no-repeat;width:40px;height:44px}
+.timkiem{background:url(images/img.png) -367px 0 no-repeat;width:40px;height:44px}
+.thanhtoan:hover{background:url(images/img.png) -67px 0 no-repeat;width:40px;height:44px}
+.lienhe:hover{background:url(images/img.png) -265px 0 no-repeat;width:40px;height:44px}
+.timkiem:hover{background:url(images/img.png) -467px 0 no-repeat;width:40px;height:44px}
+.ttop a{text-align:center;color:#fff}
+.hotline{text-align:center;color:#fff;font-size:21px;text-shadow:0 0 5px #666,0px 0 5px #000}
+.hotlineb{text-align:center;color:#99FF33;font-size:21px;text-shadow:0 0 5px #666,0px 0 5px #000}
+.headtext{text-align:center;color:#ff0;font-size:18px;text-shadow:0 0 5px #666,0px 0 5px #000}
+.topheader{height:190px}
+.menutop{background:url(images/image.png) repeat-x;display:inline-block;width:100%;height:42px}
+.menutop a{display:block;height:20px;font-weight:700;font-size:15px;color:#fff;text-decoration:none;padding:10px}
+.menutop a:hover{font-weight:700;font-size:15px;color:#ff0;border-bottom:6px solid #ff0;border-top:6px solid #ff0;padding-top:2px;padding-bottom:2px}
+.menuxo{border-left:2px dotted #ccc;line-height:3px;width:145px}
+.nutxo{width:110px;margin-left:20px}
+.menugiua{background:#39f;height:25px;font-size:12px;color:#fff;font-family:Arial;text-align:left}
+.botren{background:#ca2147;width:695px;height:43px;display:inline-block;padding:5px}
+.botren h3{font-family:arial;font-size:21px;color:#fff;font-weight:normal;padding-left:20px;margin-top:9px}
+.botim{background:#fff;width:715px;display:inline-block}
+.nutbam{background:#ca2147;border-radius:10px 10px 10px 10px;border:#ca2147 solid 1px;text-align:center;display:inline-block;font-weight:700;color:#fff;height:15px;padding:5px 10px;}
+.nutbam2{background:#ca2147;border-radius:10px 10px 10px 10px;border:#ca2147 solid 1px;text-align:center;display:inline-block;font-weight:700;color:#fff;height:27px;padding:5px;}
+.nuttim{background:#ca2147;width:100px;border-radius:0 15px 15px 0;border:#ca2147 solid 1px;text-align:center;display:inline-block;font-weight:700;color:#fff;height:31px;}
+.nuttim1{background:#ca2147;width:100px;border-radius:15px 0 0 15px;border:#ca2147 solid 1px;text-align:center;display:inline-block;font-weight:700;color:#fff;height:31px;}
+.boxxam{background:#ddd;border:1px solid #666;text-align:center;color:#666}
+.nuttim:hover{background:#333;color:#fff;border:#000 solid 1px;}
+.paging2 a{background:#f00;font-weight:bold;color:#fff;width:15px;height:15px;padding:5px 10px}
+.paging a{background:#eee;border:1px solid #ca2147;color:#ca2147;width:15px;height:10px;padding:5px 10px}
+.paging a:hover,.paging2{background:#ca2147;font-weight:bold;color:#fff;width:15px;height:15px;padding:5px 10px}
+.padding1{padding-top:7px;padding-bottom:7px;padding-left:7px}
+.content{background:#eee}
+.menucontent{background:#fff;text-align:left;padding:5px}
+.menucontent h2{height:33px;background:#ca2147;font-family:arial;font-size:21px;color:#fff;font-weight:normal;margin:0px;padding-left:20px;padding-top:10px}
+.btleft{background:url(images/img.png) 0 -176px no-repeat;height:19px}
+.btcenter{background:url(images/img.png) 5px -148px no-repeat;height:28px}
+.bthome{background:url(images/img.png) 0 -120px no-repeat;height:28px}
+.logotop{background:url(images/img.png) 0 -199px no-repeat}
+.logotopb{background:url(images/img.png) 0 -235px no-repeat}
+.logotopc{background:url(images/img.png) 0 -250px no-repeat}
+.content .bentrai{width:235px;text-align:left}
+.listmenu{background:#eee;list-style:none;margin:0;padding:0}
+.listmenu li{height:25px;display:block;border-bottom:1px solid #cfcfcf;border-top:1px solid #fff;margin:0;padding:0}
+.listmenu li li{display:none}
+.listmenu li a{display:block;text-decoration:none;font-weight:700;color:#666;font-family:arial;padding:5px 15px;font-size:12px;}
+.listmenu li a:hover,.listmenu .selected a{background:#999;color:#333}
+.benphai{}
+.slide{background:url(images/bg.png) repeat-x;height:220px;}
+.khungtrong{background:#eee;margin:5px}
+.khungtren{background:#fff;padding:10px}
+.khungleft{background:#eee}
+.bentrong{background:#eee 0 0 no-repeat;width:715px;text-align:left;margin-bottom:5px}
+.bentrong h1,.bentrong h2{font-size:16px;color:#06c;display:block;height:20px;border:1px;border-color:#666;margin:15px 0 5px;padding:5px 15px}
+.bentrong .sim{text-align:center;color:#0066b3;font-weight:700;font-size:14px}
+.inco{background:url(images/img.png) -826px -145px no-repeat;height:12px;width:18px;color:#fff;text-align:left;padding-left:20px;margin-top:8px;margin-left:5px;}
+.footerline{background:#fff;height:5px}
+.footerbg{background:#ca2147}
+.footer{width:100%}
+.logoft{background:url(images/img.png) -723px -148px no-repeat;height:100px;width:100px;margin-top:5px}
+.footer .menubottom{text-align:left;height:0;width:0;float:left}
+.footer .menubottom p{width:0;padding-top:0;padding-left:0}
+.footer .menubottom p a{color:#FFF}
+.footer .footercontent{display:block;width:999px;float:right;margin-top:0;text-align:left}
+* html .cell{display:inline}
+.chonnhanh a,.inco:hover{color:#fff}
+.nutbam:hover,.nutbam2:hover{background:#333;color:#fff;border:#000 solid 1px;}
+.ftlink{text-align:left;font-size:13px;font-weight:bold;line-height:200%}
+.mangs{border:1px solid #ccc;font-weight:700;padding:1px}
+.mangs a{color:#ca2147}
+.mangs a:hover{color:#333}
+.bars{background:#666;color:#fff;font-size:13px;}
+.ui-widget-content{border:1px solid silver;background:#fff 50% bottom repeat-x;color:#2b2b2b}
+.new{background-image:url (images/new.gif) no-repeat}
+.loopsoao{background-image:url(images/loopsoao.jpg)}
+.nivoSlider{position:relative;width:100%;height:auto;overflow:hidden;}
+.nivoSlider img{position:absolute;top:0;left:0;max-width:none;}
+.nivo-main-image{display:block !important;position:relative !important;width:100% !important;}
+.nivoSlider a.nivo-imageLink{position:absolute;top:0;left:0;width:100%;height:100%;border:0;padding:0;margin:0;z-index:6;display:none;}
+.nivo-slice{display:block;position:absolute;z-index:5;height:100%;top:0;}
+.nivo-box{display:block;position:absolute;z-index:5;overflow:hidden;}
+.nivo-box img{display:block;}
+.nivo-caption{position:absolute;left:0;bottom:0;background:#000;color:#fff;width:100%;z-index:8;padding:5px 10px;opacity:0.800000011920928955078125;overflow:hidden;display:none;box-sizing:border-box;}
+.nivo-caption p{padding:5px;margin:0;}
+.nivo-caption a{display:inline !important;}
+.nivo-html-caption{display:none;}
+.nivo-directionNav a{position:absolute;top:45%;z-index:9;cursor:pointer;}
+.nivo-prevNav{left:0;}
+.nivo-nextNav{top:0;}
+.nivo-controlNav{text-align:center;padding:15px 0;}
+.nivo-controlNav a{cursor:pointer;}
+.nivo-controlNav a.active{font-weight:bold;}
+#toTop {
+position:fixed;
+bottom:20px;
+right:20px;
+cursor:pointer;
+background:url(images/img.png) -713px -268px no-repeat;
+text-indent:-999px;
+width:60px;
+height:60px;
+}
+#toTop:hover {
+background:url(images/img.png) -713px -339px no-repeat;
+text-indent:-999px;
+width:60px;
+height:60px;
+}
+#dock {
+position:fixed;
+right:0px;
+top:300px;
+cursor:pointer;
+background:url(images/img.png) -662px -267px no-repeat;
+text-indent:-999px;
+width:35px;
+height:120px;
+}

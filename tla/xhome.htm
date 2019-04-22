@@ -1,0 +1,128 @@
+﻿<div class="botim"><div class="khungtrong">
+<table class="botren" style="width: 100%; border-spacing:0; padding:0">
+<tr>
+<td width="555px"><h3>Kho {$tongsim} SIM - Nhập số cần tìm & click Tìm SIM</h3></td><td width="150px"><h3><span style="text-align:right">Đầu số ▼</span></h3></td>
+</tr>
+</table>
+<table style="width: 100%; border-spacing:0; padding:0; ">
+<form name="timkiemsim" method="GET" action="index.php" onsubmit="return checksearch()"><input name="act" value="search" type="hidden">
+<div>
+<table style="width: 100%;border-spacing:0; padding:0">
+<tbody>
+<tr style="text-align: left">
+<td width="500px" style="text-align: center;"><br />
+<div><div style="height:31px"><input value="Nhập số:" name="submit" type="submit" class="nuttim1" /><input onkeyup="checkmobis(this);" onclick="$('html, body').animate({ scrollTop: 470 }, 'slow');this.className='vienxanh'; this.value='';" name="Textsim" type="text" value="{$thiskey}" style="width: 160px; height: 25px; color: #000000" id="csearch" /><input value="Tìm SIM" name="submit" type="submit" class="nuttim" onsubmit="$('html, body').animate({ scrollTop: 730 }, 'slow');" /></div><div id="dialog">
+<span>VD: </span>
+<a onclick="document.timkiemsim.Textsim.value='*1986'" href="javascript:void(0)" rel="nofollow">*1986</a>,
+<a onclick="document.timkiemsim.Textsim.value='09*6868'" href="javascript:void(0)" rel="nofollow">09*6868</a>,
+<a onclick="document.timkiemsim.Textsim.value='0913*'" href="javascript:void(0)" rel="nofollow">0913*</a>,
+<a onclick="document.timkiemsim.Textsim.value='01234*'" href="javascript:void(0)" rel="nofollow">01234*</a>,
+<a onclick="document.timkiemsim.Textsim.value='091xxxx678'" href="javascript:void(0)" rel="nofollow">091xxxx678</a>,
+<a onclick="document.timkiemsim.Textsim.value='09*99x99'" href="javascript:void(0)" rel="nofollow">09*99x99</a>
+<br /><br />
+<select name="smang" style="width: 93px"><option value="0">Chọn mạng</option>{section name=d loop=$tenmang}<option value="{$tenmang[d]}">- {$tenmang[d]}</option>{/section}</select>
+<select name="sgiatu" type="text" style="width: 80px"><option value="100000">Giá từ</option>
+<option value="200000">200 nghìn</option>
+<option value="500000">500 nghìn</option>
+<option value="1000000">1 triệu</option>
+<option value="5000000">5 triệu</option>
+<option value="10000000">10 triệu</option>
+<option value="20000000">20 triệu</option>
+<option value="50000000">50 triệu</option>
+<option value="100000000">100 triệu</option>
+<option value="200000000">200 triệu</option>
+<option value="500000000">500 triệu</option>
+</select>
+<select name="sgiaden" type="text" style="width: 80px"><option value="10000000000">Giá đến</option>
+<option value="500000">500 nghìn</option>
+<option value="1000000">1 triệu</option>
+<option value="5000000">5 triệu</option>
+<option value="10000000">10 triệu</option>
+<option value="20000000">20 triệu</option>
+<option value="50000000">50 triệu</option>
+<option value="100000000">100 triệu</option>
+<option value="200000000">200 triệu</option>
+<option value="500000000">500 triệu</option>
+<option value="1000000000">1 tỷ</option>
+</select>
+<select name="tongnut" style="width: 80px"><option value="11">Tổng nút</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="0">10</option>
+</select>
+<br />
+<div style="font-size:12;font-weight:bold">
+<input name="dausim" checked="checked" value="0" style="width: 20px" type="radio" /><span style="color:#f00">Tất cả</span>
+<input name="dausim" style="width: 20px" value="09" type="radio" /><span style="color:#f00">10 số</span>
+<input name="dausim" value="01" type="radio" /><span style="color:#f00">11 số</span>
+<input name="post[oder]" value="" checked="checked" type="radio" /><span style="color:#06e">Xếp giá</span>
+<input name="post[oder]" value="order by giaban asc" type="radio" /><span style="color:#06e">Thấp</span>
+<input name="post[oder]" value="order by giaban desc" type="radio" /><span style="color:#06e">Cao</span>
+</div><br />
+<div style="font-size:12px">Dãy số không có số:
+<input name="n[]" type="checkbox" value="1" />1<input name="n[]" type="checkbox" value="2" />2<input name="n[]" type="checkbox" value="3" />3<input name="n[]" type="checkbox" value="4" />4<input name="n[]" type="checkbox" value="5" />5<input name="n[]" type="checkbox" value="6" />6<input name="n[]" type="checkbox" value="7" />7<input name="n[]" type="checkbox" value="8" />8<input name="n[]" type="checkbox" value="9" />9</div></div><br />
+</td>
+<td width="215" class="menuxo">
+<select name="sx" class="nutxo" onchange="window.location.href='dau-so-'+this.options[selectedIndex].value+'.html';"><option>Vinaphone</option>{section name=d loop=$dauvina}<option value="{$dauvina[d]}">- {$dauvina[d]} -</option>{/section}</select><br /><br />
+<select name="sv" class="nutxo" onchange="window.location.href='dau-so-'+this.options[selectedIndex].value+'.html';"><option>Mobifone</option>{section name=d loop=$daumobi}<option value="{$daumobi[d]}">- {$daumobi[d]} -</option>{/section}</select><br /><br />
+<select name="sa" class="nutxo" onchange="window.location.href='dau-so-'+this.options[selectedIndex].value+'.html';"><option>Viettel</option>{section name=d loop=$dauviettel}<option value="{$dauviettel[d]}">- {$dauviettel[d]} -</option>{/section}</select><br /><br />
+<select name="sa0" class="nutxo" onchange="window.location.href='dau-so-'+this.options[selectedIndex].value+'.html';"><option>VietNamobile</option>{section name=d loop=$dauVietNamobile}<option value="{$dauVietNamobile[d]}">- {$dauVietNamobile[d]} -</option>{/section}</select><br /><br />
+<select name="sa1" class="nutxo" onchange="window.location.href='dau-so-'+this.options[selectedIndex].value+'.html';"><option>Gmobile</option>{section name=d loop=$dauGmobile}<option value="{$dauGmobile[d]}">- {$dauGmobile[d]} -</option>{/section}</select><br /><br />
+<select name="sa2" class="nutxo" onchange="window.location.href='dau-so-'+this.options[selectedIndex].value+'.html';"><option>Sfone</option>{section name=d loop=$dausfone}<option value="{$dausfone[d]}">- {$dausfone[d]} -</option>{/section}</select><br /><br />
+</td>
+</tr>
+</table>
+</div></div>
+<div class="btcenter"></div>
+</form>
+</div>
+<div class="botim"><div class="khungtrong">
+<div class="botren" style="width: 100%; border-width: 0; border-spacing:0; padding:0">
+<div><h3>
+{$muc}</h3>
+</div>
+</div>
+{if $loaisim ==1}
+<table style="width: 100%">
+{section name=l loop = $vloai} {if $l[l] ==0}
+<tr>
+{/if}
+<td style="text-align: center; width:186px" class="mangs">
+<a title="{$my_keyword} - {$vloai[l]}" href="{$vlink[l]}">
+{$vloai[l]}</a></td>
+{if $l[l] ==3}
+</tr>
+{/if} {/section}
+</table>
+{/if}
+<table cellspacing="0px" cellpadding="0px" style="width: 100%; border-spacing:0; padding:0">
+<tr class="bars" style="height:20px; font-weight:bold">
+<td style="width: 10%; padding-left:18px">STT</td>
+<td style="width: 20%; padding-left:30px">SỐ SIM</td>
+<td style="width: 17%; padding-left:30px">GÍA BÁN</td>
+<td style="width: 20%; padding-left:35px">KHUYẾN MÃI</td>
+<td style="width: 18%; padding-left:35px">MẠNG</td>
+<td style="width: 15%; padding-left:35px">ĐẶT MUA</td>
+</tr>
+{section name = d loop = $data}
+<tr style="height:30px;font-size:13px;">
+<td style="border-bottom:1px solid #cfcfcf;border-top:1px solid #fff;width: 10%; text-align: center;">{$data[d].stt}</td>
+<td style="border-bottom:1px solid #cfcfcf;border-top:1px solid #fff;width: 20%"><a href="mua-sim-dep-{$data[d].sim2}.html"><span class="mausosim">{$data[d].sim1}</span></a></td>
+<td style="border-bottom:1px solid #cfcfcf;border-top:1px solid #fff;width: 17%; padding-left:10px">{$data[d].giaban}</td>
+<td style="border-bottom:1px solid #cfcfcf;border-top:1px solid #fff;width: 20%; text-align: center;">Chưa có</td>
+<td style="border-bottom:1px solid #cfcfcf;border-top:1px solid #fff;width: 18%; text-align: center;">{$data[d].mang}</td>
+<td style="border-bottom:1px solid #cfcfcf;border-top:1px solid #fff;width: 15%; text-align: center;"><a href="mua-sim-dep-{$data[d].sim2}.html" rel="nofollow"><span class="nutbam" style="font-size:11px;">MUA SIM</span></a></td>
+</tr>
+{/section}
+</table>
+<div class="paging" colspan="5" align="center" style="padding:15px">{$paging}</div>
+<div class="padding1"><g:plusone size="medium"></g:plusone><div class="fb-like" data-href="http://simsodep.ovi.vn" data-send="true" data-layout="button_count" data-width="450" data-show-faces="true"></div>
+</div>
+</div></div><div class="btcenter"></div>

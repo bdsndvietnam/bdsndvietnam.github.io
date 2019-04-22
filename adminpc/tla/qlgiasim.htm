@@ -1,0 +1,36 @@
+﻿<form method="post" action="">
+<div class="botim">
+<div class="botren"><div class="chutrang2">Quản lý tăng giảm giá SIM trong WEB</div></div>
+<table border="0" width="100%" id="table1" cellspacing="0" cellpadding="0">
+	<tr>
+		<td>
+		<table border="0" width="100%" id="table2" cellspacing="1">
+			<tr class="chuxanhdam" style="font-weight:bold">
+				<td width="10%" height="20">STT</td>
+				<td width="60%" height="20">Mô tả chi tiết</td>
+				<td width="10%" align="center" height="20">Vị trí</td>
+				<td width="10%" align="center" height="20">Tăng / Giảm %</td>
+			</tr>
+{section name=d loop=$data}
+			<tr class="{$data[d].class}">
+				<td class="adlef" width="10%" style="height: 20px; text-align:center">{$data[d].st}</td>
+				<td class="adlef" width="70%" class="left50px" style="height: 20px">{$data[d].chitiet}</td>
+				<td class="adlef" width="10%" style="height: 20px; text-align:center">{$data[d].vitri}</td>
+				<td class="adlef" width="10%" style="height: 20px; text-align:center">
+				<input name="p[{$data[d].id}]" type="text" style="width: 53px; text-align:center" value="{$data[d].pt}">&nbsp;%</td>
+			</tr>
+			{/section}
+			</table>
+		</td>
+	</tr>
+<tr>
+<td height="20">
+<table style="width: 100%">
+<tr>
+<td align="right" style="padding:10px"><input name="submit" type="submit" value="C&#7853;p nh&#7853;p" class="nutbam2">&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>	
+</table>
+</div></form>

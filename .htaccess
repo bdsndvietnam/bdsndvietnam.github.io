@@ -1,0 +1,78 @@
+RewriteEngine on
+## Options +FollowSymlinks
+RewriteBase /
+RewriteRule ^tintuc.html?(.*)$ index.php?act=tintuc&link=$1
+RewriteRule ^tag-([a-z-]*) index.php?act=xhome&tag=$1
+RewriteRule ^v([0-9]*)([a-zA-Z-]*)\.html$ index.php?act=page&pid=$1&t=$2
+RewriteRule ^([0-9]*)-(.*)\.html index.php?act=news&newid=$1&link=$2
+RewriteRule ^taibangso-([a-zA-Z-]*).html index.php?act=taibangso&sloai=$1
+RewriteRule ^dat-mua-sim-([0-9-]*)-cid([0-9]*).html index.php?act=dat-mua-sim&sosim=$1&cid=$2
+RewriteRule ^mua-sim-dep-([0-9-]*).html index.php?act=dat-mua-sim&sosim=$1
+RewriteRule ^mua-sim-re-([0-9-]*).html index.php?act=datsimao&sosim=$1
+RewriteRule ^them-sim-([0-9]*) aindex.php?act=cart&sid=$1
+RewriteRule ^thongtindathang.html index.php?act=buyinfo
+RewriteRule ^chontheokieu_([a-z-]*).html index.php?act=timtheokieu&kieu=$1
+RewriteRule ^mua-so-dep index.php?act=datsim
+RewriteRule ^tim-kiem-sim-so-dep-([0-9A-Za-z]*)-([0-9.\,/]*)-([0-9.\,/]*)-([0-9.\*/]*)-([0-9]*).html index.php?act=search&smang=$1&sgiatu=$2&sgiaden=$3&Textsim=$4&tongnut=$5
+RewriteRule ^tim-kiem-sim-so-dep-([0-9A-Za-z]*)-([0-9.\,/]*)-([0-9.\,/]*)-([0-9.\*/]*)-([0-9]*)-Trang-([0-9]*).html index.php?act=search&smang=$1&sgiatu=$2&sgiaden=$3&Textsim=$4&tongnut=$5&page=$6
+RewriteRule ^sim-so-dep--([a-zA-Z]*).html index.php?act=sim-so-dep&sloai=$1
+RewriteRule ^sim-so-dep--([a-zA-Z]*)-Trang-([0-9]*).html index.php?act=sim-so-dep&sloai=$1&page=$2
+RewriteRule ^sim-so-dep-([a-zA-Z]*)-([a-zA-Z-]*).html index.php?act=sim-so-dep&smang=$1&sloai=$2
+RewriteRule ^sim-so-dep-([a-zA-Z]*)-([a-zA-Z-]*)-Trang-([0-9]*).html index.php?act=sim-so-dep&smang=$1&sloai=$2&page=$3
+RewriteRule ^so-dep-([a-zA-Z]*).html$ index.php?act=sim-so-dep&smang=$1
+RewriteRule ^so-dep-([a-zA-Z]*)-Trang-([0-9]*).html$ index.php?act=sim-so-dep&smang=$1&page=$2
+RewriteRule ^mang-([a-zA-Z]*)-([a-zA-Z-]*)\.html$ index.php?act=sim-so-dep&smang=$1&sloai=$2
+RewriteRule ^mang-([a-zA-Z]*)-([a-zA-Z-]*)-Trang-([0-9]*)\.html$ index.php?act=sim-so-dep&smang=$1&sloai=$2&page=$3
+RewriteRule ^([a-zA-Z-]*)\.html$ index.php?act=sim-so-dep&sloai=$1
+RewriteRule ^([a-zA-Z-]*)-Trang-([0-9]*)\.html$ index.php?act=sim-so-dep&sloai=$1&page=$2
+RewriteRule ^dau-so-([0-9]*)-Trang([0-9]*)\.html index.php?act=sim-so-dep&sdauso=$1&page=$2
+RewriteRule ^Sim-So-Dep-([0-9]*)\.SimSoDep$ index.php?page=$1
+RewriteRule ^dau-so-([0-9]*)\.html index.php?act=sim-so-dep&sdauso=$1
+RewriteRule ^ho-tro-mua-sim-$ index.php?act=hotro
+RewriteRule ^ho-tro-mua-sim-([0-9]*) index.php?act=hotro&sid=$1
+RewriteRule ^xem-phong-thuy-so-dep index.php?act=phongthuy
+RewriteRule ^lien-he-mua-sim-dep index.php?act=lienhe
+RewriteRule ^tim-sim '(.*)\/index.php?act=search&submit\/(.*)'
+## EXPIRES CACHING ##
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/jpg "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/gif "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/pdf "access plus 1 month"
+ExpiresByType text/x-javascript "access plus 1 week"
+ExpiresByType text/javascript "access plus 1 week"
+ExpiresByType application/x-shockwave-flash "access plus 1 month"
+ExpiresByType image/x-icon "access plus 1 year"
+ExpiresDefault "access plus 1 week"
+</IfModule>
+## EXPIRES CACHING ##
+<FilesMatch ".(ico|jpg|jpeg|png|gif|js|css|swf)$">
+    Header set Expires "Tue, 16 Jun 2020 20:00:00 GMT"
+</FilesMatch>
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE image/x-icon
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE text/x-js
+    AddOutputFilterByType DEFLATE text/ecmascript
+    AddOutputFilterByType DEFLATE application/ecmascript
+    AddOutputFilterByType DEFLATE text/vbscript
+    AddOutputFilterByType DEFLATE text/fluffscript
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE application/x-font-ttf
+    AddOutputFilterByType DEFLATE application/x-font
+    AddOutputFilterByType DEFLATE font/opentype
+    AddOutputFilterByType DEFLATE font/otf
+    AddOutputFilterByType DEFLATE font/ttf
+    AddOutputFilterByType DEFLATE application/x-font-truetype
+    AddOutputFilterByType DEFLATE application/x-font-opentype
+    AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+    AddOutputFilterByType DEFLATE application/vnd.oasis.opendocument.formula-template
+</IfModule>  

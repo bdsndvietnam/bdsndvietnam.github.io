@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled 1</title>
+</head>
+
+<body>
+<script type="text/javascript">
+function hget(sosim,mobile,type)
+{
+	$('#load').html('<img src="loading.gif">');
+	$('#load').load('aindex.php?act=check&so='+sosim+'&dlso='+mobile+'&type='+type);
+}
+function pdaban(so)
+{
+	$('#load').html('<img src="loading.gif">');
+	$('#load').load('aindex.php?act=daban&so='+so+'');
+}
+function hsend(to,msg)
+{
+	msg=msg.replace(/&/i,' ');
+	msg=msg+' '+document.sms.sendby.value+'';
+	if(document.sms.msg.value.length > 100)
+	{
+	alert('Tin nhắn quá dài! Vui Lòng xóa bớt');
+	return fasle;
+	}
+	$('#load').html('<img src="loading.gif">');
+	$.ajax({
+	type: 'POST',
+	data:'to='+to+'&msg='+msg+'&sendby='+document.sms.sendby.value+'',
+	url: 'aindex.php?act=check&so=11111111',
+	success:function(data){
+	$('#load').html(data);
+	}
+	});
+}
+function smsleng()
+{
+ document.sms.leng.value=100-document.sms.msg.value.length;
+}
+</script>
+<table style="width: 100%">
+	<tr>
+		<td style="text-align: center">
+		<form method="post">
+			<br />
+			<div id="thongbao">
+			</div>
+			<div id="load">
+			</div>
+			
+			<span style="color: #99CC00"><strong>&nbsp;{$thongbao}</strong></span><br />
+			<input name="submit" type="submit" value="Nhập số:" class="nuttim1"/><input name="sosim" style="width: 183px; height: 25px" value="{$sim2}" /><input name="submit" type="submit" value="Check" class="nuttim"/><br />
+			{if $gianhap > 0}
+			<br />
+<div align="center">			
+		<table cellpadding="0" cellspacing="0" style="border:1px solid #999;text-align:left;margin-left:10px;background:#fff;font-weight:bold">
+			<tr style="height:30px">
+			<td colspan="2" style="text-align:center;background:#16b;color:#fff">THÔNG TIN</td>
+			</tr>
+			<tr style="height:30px">
+			<td style="padding:0px 10px;width:60px;border-bottom:1px solid #999;border-right:1px solid #999">Số SIM</td>
+			<td style="padding:0px 10px;border-bottom:1px solid #999">{$sodt}</td>			
+			</tr>
+			<tr style="height:30px">
+			<td style="padding:0px 10px;width:60px;border-bottom:1px solid #999;border-right:1px solid #999">Giá khách</td>
+			<td style="padding:0px 10px;border-bottom:1px solid #999;color:#f00">{$giakhach}</td>			
+			</tr>
+			<tr style="height:30px">
+			<td style="padding:0px 10px;width:60px;border-bottom:1px solid #999;border-right:1px solid #999">Giá gốc</td>
+			<td style="padding:0px 10px;border-bottom:1px solid #999;color:#f00">{$giagoc}</td>			
+			</tr>
+			<tr style="height:30px">
+			<td style="padding:0px 10px;width:60px;border-bottom:1px solid #999;border-right:1px solid #999">Huê hồng</td>
+			<td style="padding:0px 10px;border-bottom:1px solid #999">{$hoahongdl} %</td>			
+			</tr>			
+			<tr style="height:30px">
+			<td style="padding:0px 10px;width:60px;border-bottom:1px solid #999;border-right:1px solid #999">Đại lý</td>
+			<td style="padding:0px 10px;border-bottom:1px solid #999">{$hovaten}</td>			
+			</tr>
+			<tr style="height:30px">
+			<td style="padding:0px 10px;width:60px;border-bottom:1px solid #999;border-right:1px solid #999">Tỉnh thành</td>
+			<td style="padding:0px 10px;border-bottom:1px solid #999">{$city}</td>			
+			</tr>	
+			<tr style="height:30px">
+			<td style="padding:0px 10px;width:60px;border-right:1px solid #999">Hotline</td>
+			<td style="padding:0px 10px;color:#f00">{$mobile}</td>			
+			</tr>				
+	</table>
+</div>			
+			<br />
+			&nbsp;<input onclick="hget('{$sim2}','{$mobile}','giu');" name="giu" type="button" value="Báo giữ" class="nutbam2" />
+			<input onclick="pdaban('{$sim2}');" name="daban" type="button" value="Đã bán" class="nutbam2" /><br /><br />
+			<a class="nutbam" href="index.php?act=baogia&post%5Bdaily%5D={$id}">Kho đại lý</a><br />
+			{/if}
+			<br />
+		</form>
+	</td>
+	</tr>
+</table>
+</body>
+</html>

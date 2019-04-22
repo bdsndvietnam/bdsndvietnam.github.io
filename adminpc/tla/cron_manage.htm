@@ -1,0 +1,58 @@
+﻿
+<form method="post" action="">
+<div class="botim">
+<div class="botren"><div class="chutrang2">Quản lý giao nhận bưu phẩm</div></div>
+<table border="0" width="100%" id="table1" cellspacing="0" cellpadding="0">
+	<tr>
+		<td>
+		<table border="0" width="100%" id="table2" cellspacing="1">
+			<tr style="height:35px">
+				<td width="4%" height="20" align="center">
+				&nbsp;</td>
+				<td height="20" style="width: 7%">&nbsp;</td>
+				<td height="20" style="width: 7%">&nbsp;</td>
+				<td height="20" style="width: 17%">&nbsp;</td>
+				<td width="19%" height="20">&nbsp;</td>
+				<td width="6%" align="center" height="20">&nbsp;</td>
+				<td width="7%" align="center" height="20">&nbsp;</td>
+				<td width="7%" align="center" height="20"> <a class="nutbam" style="font:small-caption; float:right" href="aindex.php?act=add_cron" rel="lyteframe[catalog]" title="Thêm Cron" rev="width: 500px; height: 500px; scrolling: no;">
+		Add</a></td>
+			</tr>
+			<tr class="chuxanhdam" style="height:35px">
+				<td width="4%" height="20" align="center">
+				<p align="center"><b>STT</b></td>
+				<td height="20" style="width: 7%"><strong>Thời gian</strong></td>
+				<td height="20" style="width: 7%"><strong>Còn Lại</strong></td>
+				<td height="20" style="width: 17%"><strong>To:</strong></td>
+				<td width="19%" height="20"><strong>Nội dung</strong></td>
+				<td width="6%" align="center" height="20">Trạng Thái</td>
+				<td width="7%" align="center" height="20">Kiểu</td>
+				<td width="7%" align="center" height="20"><b>Xóa</b></td>
+			</tr>
+			{section name=d loop=$data}
+			<tr class="{$data[d].class}" style="height:22px">
+				<td class="adlef" width="4%" height="20" align="center">{$data[d].st}</td>
+				<td class="adlef" height="20" style="width: 7%">
+				{$data[d].cr_date}</td>
+				<td class="adlef" height="20" style="width: 7%">
+				{$data[d].cr_end}</td>
+				<td class="adlef" height="20" style="width: 17%">
+				{$data[d].cr_to}</td>
+				<td class="adlef" width="19%" height="20" class="left50px">
+				{$data[d].cr_msg}</td>
+				<td class="adlef" width="6%" align="center" height="20">
+				{$data[d].cr_staus}</td>
+				<td class="adlef" width="7%" align="center" height="20">
+				{$data[d].cr_type}</td>
+				<td class="adlef" width="7%" align="center" height="20">
+				<a class="nutbam"  href="?{$c_url}&delid={$data[d].id}" onclick="return conf('{$data[d].tieude}')">Xóa</a></td>
+			</tr>
+			{/section}
+			<tr class="{$data[d].class}">
+				<td height="20" align="center" colspan="8">{$paging}</td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</div>

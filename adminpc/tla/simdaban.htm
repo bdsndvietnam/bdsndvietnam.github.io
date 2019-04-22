@@ -1,0 +1,78 @@
+﻿<script>
+function select(a) {
+    var theForm = document.fr;
+    for (i=0; i<theForm.elements.length; i++) {
+        if (theForm.elements[i].name=='check[]')
+            theForm.elements[i].checked = a;
+    }
+}
+function pdaban(so)
+{
+	//$('#load').html('<img src="loading.gif">');
+	$.get('aindex.php?act=daban&so='+so+'');
+}
+
+</script>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<div class="botim">
+<div class="botren"><div class="chutrang2">Quản lý SIM đã bán</div></div>
+<form method="get" action="index.php">
+<input type="hidden" name="act" value="baogia">
+	<table style="width: 100%">
+		<tr>
+			<td>&nbsp;&nbsp;
+			<input name="post[search]" type="text" style="width: 142px;">
+			<input name="submit" type="submit" value="Tìm kiếm" class="nutbam2"> </td>
+		</tr>
+	</table>
+	</form>
+	<form method="post" name="fr">
+	<table  style="width: 100%">
+		<tr class="chuxanhdam" style="height:40px">
+			<td style="text-align: center; width: 39px"><strong>STT</strong></td>
+			<td style="width: 129px"><strong>Ngày</strong></td>
+			<td style="width: 129px"><strong>Số Sim</strong></td>
+			<td style="width: 107px"><strong>Giá bán</strong></td>
+			<td style="width: 91px"><strong>Giá đại lý</strong></td>
+			<td style="text-align: center; width: 206px"><strong>Đại lý</strong></td>
+			<td style="width: 100px; text-align: center"><strong><a href="javascript:select(1)">Check</a> |<a href="javascript:select(0)">Uncheck</a></strong></td>
+		</tr>
+		{section name=d loop=$data}
+		
+		<tr id="s{$data[d].simid}">
+			<td class="adlef" style="width: 39px">{$data[d].stt}</td>
+			<td class="adlef" style="width: 129px">{$data[d].ngay}</td>
+			<td class="adlef" style="width: 129px">{$data[d].sosim}</td>
+			<td class="adlef" style="width: 107px">{$data[d].giaban}</td>
+			<td class="adlef" style="width: 91px">{$data[d].gianhap}</td>
+			<td class="adlef" style="width: 206px">{$data[d].daily}</td>
+			<td class="adlef" style="text-align: center;">
+			<input name="check[]" type="checkbox" value="{$data[d].id}"></td>
+		</tr>
+		<tr id="{$data[d].simid}" style="display:none">
+			<td class="adlef" style="width: 39px">{$data[d].stt}</td>
+			<td class="adlef" style="width: 129px">&nbsp;</td>
+			<td class="adlef" style="width: 129px"><input name="p[{$data[d].simid}][sim1]" type="text" value="{$data[d].sim1}"></td>
+			<td class="adlef" style="width: 107px"><input name="p[{$data[d].simid}][giaban]" type="text" value="{$data[d].giaban}"></td>
+			<td class="adlef" style="width: 91px"><input name="p[{$data[d].simid}][gianhap]" type="text" value="{$data[d].gianhap}"></td>
+			<td class="adlef" style="width: 206px">{$data[d].daily}</td>
+			<td class="adlef" style="text-align: center;">
+			<input name="check[]" type="checkbox" value="{$data[d].simid}"></td>
+		</tr>
+		{/section}
+		<tr>
+			<td style="width: 39px"></td>
+			<td style="width: 129px">&nbsp;</td>
+			<td style="width: 129px"></td>
+			<td style="width: 107px"></td>
+			<td style="width: 91px"></td>
+			<td style="text-align: right;" colspan="2"><a target="_blank" href="aindex.php{$my_link}&taive=1" class="nutbam">Tải về</a> 
+			<input name="xoaall" type="submit" value="Xóa" class="nutbam2" style="width: 35px"></td>
+		</tr>
+	</table>
+	</form>
+	<br>
+	{$paging}
+</div>

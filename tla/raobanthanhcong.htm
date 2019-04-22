@@ -1,0 +1,90 @@
+﻿<div class="botim"></script><div class="botren"><div class="chutrang2">Đặt hàng thành công!</div></div>
+<form target="_parent" method="post" action="index.php?act=dathangthanhcong&cid={$cid}" onsubmit="return checkdk()">
+<input name="dhmd5" type="hidden" style="width: 185px; height: 28px" value="{$dhmd5}" />
+<input name="maxacthuc2" type="hidden" style="width: 185px; height: 28px" value="{$maxt}" />
+<div style="padding-left:10px"><br />
+<table style="width:547px; text-align: left; border: 1px solid #ccc; border-spacing:0;">
+<tr style="background: #666; color:#fff; text-align:center;">
+<td class="dv" style="height: 22px; width: 50%;"><strong>Số sim</strong></td>
+<td style="width: 50%; height: 22px" ><strong>Giá tiền</strong></td>
+</tr>
+{section name = d loop = $data}
+<tr >
+<td style="height: 22px; width: 50%; font-size: 14px; color: #006FDD; text-align: center;border-right: 1px solid #ccc;border-bottom: 1px solid #ccc"><strong>{$data[d].xsosim}</strong></td>
+<td style="width: 50%; height: 22px; font-size: 14px; color: #006FDD; text-align: center;border-bottom: 1px solid #ccc"><strong>{$data[d].xgiaban}</strong></td>
+</tr>
+{/section}
+{if $tongsim != 1}
+<tr >
+<td style="background:#06e;height: 22px; width: 40%; font-size: 14px; color: #FFF; text-align: center;border-right: 1px solid #ccc;border-bottom: 1px solid #06e"><strong>Số lượng: {$tongsim} SIM</strong></td>
+<td style="background:#06e;width: 50%; height: 22px; font-size: 14px; color: #FFF; text-align: center;border-bottom: 1px solid #06e"><strong>Tổng tiền: {$tongtien}</strong></td>
+</tr>
+{/if}
+<tr>
+<td colspan="2" style="height: 30px; text-align: center; border-bottom: 1px solid #ccc">
+<strong>Thông tin nhận hàng:</strong></td>
+</tr>
+<tr>
+<td style="width: 50%;  height: 22px; border-bottom: 1px solid #ccc; border-right: 1px solid #ccc;">
+<p style=" margin-left: 20px; line-height: 100%; ">Họ và Tên: </p>
+</td>
+<td style="width: 50%; height: 22px;; border-bottom: 1px solid #ccc">
+<p style=" margin-left: 20px; line-height: 100%; ">{$hovaten}</p>
+</td>
+</tr>
+<tr>
+<td style="width: 50%;  height: 22px; border-bottom: 1px solid #ccc; border-right: 1px solid #ccc;">
+<p style=" margin-left: 20px; line-height: 100%; ">Địa chỉ: </p>
+</td>
+<td style="width: 50%; height: 22px;; border-bottom: 1px solid #ccc">
+<p style=" margin-left: 20px; line-height: 100%; ">{$diachi} {$city}</p>
+</td>
+</tr>
+<tr>
+<td style="width: 50%;  height: 22px; border-bottom: 1px solid #ccc; border-right: 1px solid #ccc;">
+<p style="margin-left: 20px; line-height: 100%; "><span lang="en-us">Di động</span>: </p>
+</td>
+<td style="width: 50%; height: 22px;; border-bottom: 1px solid #ccc"><p style="margin-left: 20px; line-height: 100%; ">{$dienthoai}</p>
+</td>
+</tr>
+{if $tel}
+{/if}
+{if $email}
+<tr>
+<td style="height: 22px; width: 50%; border-bottom: 1px solid #ccc; border-right: 1px solid #ccc; ">
+<p style="color: #000000; margin-left: 20px; line-height: 100%; ">Email: </p>
+</td>
+<td style="height: 22px; width: 50%; border-bottom: 1px solid #ccc">
+<p style="margin-left: 20px; line-height: 100%; ">{$email}</p>
+</td>
+</tr>
+{/if}
+{if $text}
+<tr>
+<td colspan="2" >
+<p style="line-height: 100%; margin-left: 20px">Thông tin kèm theo</p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="height: 32px">
+{$text}<br />
+</td>
+</tr>
+{/if}
+<tr>
+<td colspan="2"  style="height: 82px; text-align: center;">
+{$pay}<br>
+<div id="thank" style="display:none">
+<strong>
+<span style="color: #FF00FF">Quý khách đã xác thực đơn đặt hàng thành công.</span><span style="color: #FF0000"><br>
+</span><span style="color: #0066FF"><br>
+Cảm ơn quý khách đã đặt mua sim tại website <br>
+</span></strong><span style="color: #0066FF">
+<strong>Chúng tôi sẽ liên hệ với quý khách sớm nhất!</strong></span></div>
+Cảm ơn bạn đã đặt mua sim<br>
+Chúng tôi sẽ liên lạc với bạn sớm nhất</td>
+</tr>
+</table>
+<br />
+</div></div>
+</form>

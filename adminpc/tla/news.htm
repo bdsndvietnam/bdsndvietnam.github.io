@@ -1,0 +1,48 @@
+﻿<div class="botim">
+<div class="botren"><div class="chutrang2">Tin tức</div></div>
+<table border="0" width="100%" id="table1" cellspacing="0" cellpadding="0">
+	<tr>
+		<td height="20">
+		<table style="width: 100%">
+			<tr>
+				<td style="width: 689px">&nbsp;</td>
+				<td style="width: 12%">
+				<input onclick="window.location.href='?act=newsadd&domains={$indexd}'" name="Button1" type="button" value="Thêm M&#7899;i" class="nutbam2">&nbsp;</td>
+				<td style="width: 12%">
+				<input name="submit" type="submit" value="C&#7853;p nh&#7853;p" class="nutbam2">&nbsp;</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<table border="0" width="100%" id="table2" cellspacing="1">
+			<tr class="chuxanhdam">
+				<td class="adlef" width="4%" height="20" align="center">
+				<p align="center"><b>STT</b></td>
+				<td class="adlef" width="19%" height="20"><b>B&#7843;n tin</b></td>
+				<td class="adlef" width="16%" height="20"><b>S&#7855;p X&#7871;p</b></td>
+				<td class="adlef" width="6%" align="center" height="20"><b>S&#7917;a</b></td>
+				<td class="adlef" width="7%" align="center" height="20"><b>Xóa</b></td>
+			</tr>
+			{section name=d loop=$data}
+			<tr class="{$data[d].class}" style="height:22px">
+				<td class="adlef" width="4%" height="20" align="center">{$data[d].st}</td>
+				<td class="adlef" width="19%" height="20" class="left50px">
+				{$data[d].tieude}</td>
+				<td class="adlef" idth="16%" height="20">
+				<input name="pot[{$data[d].id}]" type="text" style="width: 34px" value="{$data[d].stt}"></td>
+				<td class="adlef" width="6%" align="center" height="20">
+				<a class="nutbam" href="?act=newsedit&editid={$data[d].id}">S&#7917;a</a></td>
+				<td class="adlef" width="7%" align="center" height="20">
+				<a class="nutbam"  href="?{$c_url}&delid={$data[d].id}" onclick="return conf('{$data[d].tieude}')">Xóa</a></td>
+			</tr>
+			{/section}
+			<tr class="{$data[d].class}">
+				<td height="20" align="center" colspan="5">{$paging}</td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</div>

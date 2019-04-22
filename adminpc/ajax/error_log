@@ -1,0 +1,1 @@
+[25-Jan-2013 05:59:52 UTC] PHP Warning:  mysql_affected_rows() expects parameter 1 to be resource, null given in /home/ovi/public_html/simtest/ovi_ql/ajax/post.php on line 31
