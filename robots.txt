@@ -1,5 +1,0 @@
-User-agent: SpamBot
-Disallow: /ql/
-
-User-agent: *
-Disallow: /ql/

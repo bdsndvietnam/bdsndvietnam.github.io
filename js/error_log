@@ -1,2 +1,0 @@
-[26-Apr-2013 13:13:28 UTC] PHP Warning:  imagettfbbox() [<a href='function.imagettfbbox'>function.imagettfbbox</a>]: Could not find/open font in /domains/simnoibai.com/public_html/js/captcha_code_file.php on line 74
-[26-Apr-2013 13:13:28 UTC] PHP Warning:  imagettftext() [<a href='function.imagettftext'>function.imagettftext</a>]: Could not find/open font in /domains/simnoibai.com/public_html/js/captcha_code_file.php on line 77
